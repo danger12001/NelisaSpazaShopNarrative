@@ -2,6 +2,7 @@ var assert = require('assert');
 var weeklySales = require('../weeklySales');
 var mostPopularProduct = require('../mostPopularProduct');
 var leastPopularProduct = require('../leastPopularProduct');
+var mostPopularCategory = require('../mostPopularCategory');
 
 describe("weeklySales",function(){
   it("should return a map of the sales for the month",function(){
@@ -84,5 +85,11 @@ describe("leastPopularProduct",function(){
   it("should return the least popular product of each week",function(){
     var result = leastPopularProduct.leastPopularProduct();
     assert.equal(result,"week 1: Shampoo 1 litre - 3\nweek 2: Gold Dish Vegetable Curry Can - 0\nweek 3: Shampoo 1 litre - 4\nweek 4: Top Class Soy Mince - 0");
+  });
+});
+describe("mostPopularCategory",function(){
+  it("should return the most popular category of each week",function(){
+    var result = mostPopularCategory.mostPopularCategory();
+    assert.deepEqual(result,"week 1: Coke 500ml - 54\nweek 2: Coke 500ml - 98\nweek 3: Milk 1l - 30\nweek 4: Gold Dish Vegetable Curry Can - 63");
   });
 });

@@ -28,7 +28,6 @@ exports.weeklySales = function(folderName) {
   for (i = 0; i < interimArray4.length - 1; i++) {
     processedArray4.push(interimArray4[i].split(",")); //makes each item in each sale an array index
   }
-  // console.log(processedArray3);
   var salesList1 = [];
   var salesList2 = [];
   var salesList3 = [];
