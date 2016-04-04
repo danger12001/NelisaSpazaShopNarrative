@@ -104,6 +104,6 @@ describe("leastPopularCategory",function(){
 describe("mostProfitableProduct",function(){
   it("should return the most profitable product of each week",function(){
     var result = mostProfitableProduct.mostProfitableProduct();
-    assert.equal(result,"");
+    assert.equal(result,"week 1: Imasi\nweek 2: Imasi\nweek 3: Imasi\nweek 4: Imasi");
   });
 });
