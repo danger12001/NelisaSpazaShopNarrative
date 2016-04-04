@@ -8,10 +8,10 @@ exports.weeklySales = function(folderName) {
   inputSales2 = inputSales2.replace("Day,Date,stock item,No sold,Sales Price\n", "");
   inputSales3 = inputSales3.replace("Day,Date,stock item,No sold,Sales Price\n", "");
   inputSales4 = inputSales4.replace("Day,Date,stock item,No sold,Sales Price\n", ""); // removes the headings
-  var interimArray1 = inputSales1.split('\n');
-  var interimArray2 = inputSales2.split('\n');
-  var interimArray3 = inputSales3.split('\n');
-  var interimArray4 = inputSales4.split('\n'); //splits each itemsale by new line
+  var interimArray1 = inputSales1.replace(/R/g, "").split('\n');
+  var interimArray2 = inputSales2.replace(/R/g, "").split('\n');
+  var interimArray3 = inputSales3.replace(/R/g, "").split('\n');
+  var interimArray4 = inputSales4.replace(/R/g, "").split('\n'); //splits each itemsale by new line
   processedArray1 = []; //each item sale on a line
   processedArray2 = [];
   processedArray3 = [];
@@ -34,16 +34,16 @@ exports.weeklySales = function(folderName) {
   var salesList4 = []; // Items and No sold
 
   processedArray1.forEach(function(array) {
-    salesList1.push([array[2], Number(array[3])]); //pushes Item and No sold to salesList
+    salesList1.push([array[2], Number(array[3]),[array[4]] ]); //pushes Item and No sold to salesList
   });
   processedArray2.forEach(function(array) {
-    salesList2.push([array[2], Number(array[3])]); //pushes Item and No sold to salesList
+    salesList2.push([array[2], Number(array[3]),[array[4]]]); //pushes Item and No sold to salesList
   });
   processedArray3.forEach(function(array) {
-    salesList3.push([array[2], Number(array[3])]); //pushes Item and No sold to salesList
+    salesList3.push([array[2], Number(array[3]),[array[4]]]); //pushes Item and No sold to salesList
   });
   processedArray4.forEach(function(array) {
-    salesList4.push([array[2], Number(array[3])]); //pushes Item and No sold to salesList
+    salesList4.push([array[2], Number(array[3]),[array[4]]]); //pushes Item and No sold to salesList
   });
   // console.log(salesList);
   salesList1.sort();
@@ -61,13 +61,15 @@ exports.weeklySales = function(folderName) {
     if (i % 7 === 0) {
       var stockItem = salesList1[i][0]; //if i % 7 then put that item with index 0 in stockItem (salesList index 0 = Item)
       var sold = 0; // amount sold
+      var income = salesList1[i][2];
 
       for (j = 0; j < 7; j++) {
         sold += salesList1[i + j][1]; //gets the No sold
       }
       weeklySales1.push({ //pushes to weeklySales
         "stockItem": stockItem,
-        "sold": sold
+        "sold": sold,
+        "income": Number(income)
       });
     }
   }
@@ -76,13 +78,15 @@ exports.weeklySales = function(folderName) {
     if (i % 7 === 0) {
       var stockItem2 = salesList2[i][0]; //if i % 7 then put that item with index 0 in stockItem (salesList index 0 = Item)
       var sold2 = 0; // amount sold
+      var income2 = salesList2[i][2];
 
       for (j = 0; j < 7; j++) {
         sold2 += salesList2[i][1]; //gets the No sold
       }
       weeklySales2.push({ //pushes to weeklySales
         "stockItem2": stockItem2,
-        "sold": sold2
+        "sold": sold2,
+        "income": Number(income2)
       });
     }
   }
@@ -91,13 +95,15 @@ exports.weeklySales = function(folderName) {
     if (i % 7 === 0) {
       var stockItem3 = salesList3[i][0]; //if i % 7 then put that item with index 0 in stockItem (salesList index 0 = Item)
       var sold3 = 0; // amount sold
+      var income3 = salesList3[i][2];
 
       for (j = 0; j < 7; j++) {
         sold3 += salesList3[i + j][1]; //gets the No sold
       }
       weeklySales3.push({ //pushes to weeklySales
         "stockItem": stockItem3,
-        "sold": sold3
+        "sold": sold3,
+        "income": Number(income3)
       });
     }
   }
@@ -106,19 +112,21 @@ exports.weeklySales = function(folderName) {
     if (i % 7 === 0) {
       var stockItem4 = salesList4[i][0]; //if i % 7 then put that item with index 0 in stockItem (salesList index 0 = Item)
       var sold4 = 0; // amount sold
+      var income4 = salesList4[i][2];
 
       for (j = 0; j < 7; j++) {
         sold4 += salesList4[i][1]; //gets the No sold
       }
       weeklySales4.push({ //pushes to weeklySales
         "stockItem": stockItem4,
-        "sold": sold4
+        "sold": sold4,
+        "income": Number(income4)
       });
     }
   }
 // console.log(weeklySales2);
   var weeklySales = {"week1":weeklySales1, "week2":weeklySales2, "week3":weeklySales3, "week4":weeklySales4  };
   // weeklySales.join(",").split("");
-  console.log(weeklySales);
+  console.log(weeklySales2);
   return weeklySales;
 };
