@@ -5,6 +5,7 @@ var leastPopularProduct = require('../leastPopularProduct');
 var mostPopularCategory = require('../mostPopularCategory');
 var leastPopularCategory = require('../leastPopularCategory');
 var mostProfitableProduct = require('../mostProfitableProduct');
+var leastProfitableProduct = require('../leastProfitableProduct');
 
 describe("weeklySales",function(){
   it("should return a map of the sales for the month",function(){
@@ -105,5 +106,11 @@ describe("mostProfitableProduct",function(){
   it("should return the most profitable product of each week",function(){
     var result = mostProfitableProduct.mostProfitableProduct();
     assert.equal(result,"week 1: Imasi\nweek 2: Imasi\nweek 3: Imasi\nweek 4: Imasi");
+  });
+});
+describe("leastProfitableProduct",function(){
+  it("should return the least profitable product of each week",function(){
+    var result = leastProfitableProduct.leastProfitableProduct();
+    assert.equal(result,"week 1: Mixed Sweets 5s\nweek 2: Mixed Sweets 5s\nweek 3: Mixed Sweets 5s\nweek 4: Mixed Sweets 5s");
   });
 });
