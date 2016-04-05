@@ -54,6 +54,11 @@ for (x = 0; x < categories.length; x++) {
 }
 }
 }
+var mpc2 = oc2.sort(function(a, b) {
+  return parseFloat(b.amountsold) - parseFloat(a.amountsold);
+});
+var MostPopularCategory2 = mpc2[0];
+
 var oc3 = [];
 for (x = 0; x < categories.length; x++) {
   for (y = 0; y < weeklySales3.length; y++) {
