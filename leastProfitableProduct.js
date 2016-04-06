@@ -113,6 +113,7 @@ var lpp4 = w4.sort(function(a, b) {
 });
 
 var leastProfitableProduct4 = lpp4[0];
-var leastProfitableProduct = "week 1: " + leastProfitableProduct1.item + "\n" +"week 2: " + leastProfitableProduct2.item + "\n" +"week 3: " + leastProfitableProduct3.item + "\n" +"week 4: " + leastProfitableProduct4.item;
+var leastProfitableProduct = {"week1":leastProfitableProduct1.item,"week2":leastProfitableProduct2.item,"week3":leastProfitableProduct3.item,"week4":leastProfitableProduct4.item};
 return leastProfitableProduct;
+
 };

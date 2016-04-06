@@ -1,3 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title> Home </title>
+    <link href="CSS/style.css" type="text/css" rel="stylesheet">
+
+  </head>
+  <body>
+    <script>
+var fs = require('fs');
+var mostPopularProduct = require("mostPopularProduct");
+var leastPopularProduct = require("leastPopularProduct");
+var mostPopularCategory = require("mostPopularCategory");
+var leastPopularCategory = require("leastPopularCategory");
+var mostProfitableProduct = require("mostProfitableProduct");
+var leastProfitableProduct = require("leastProfitableProduct");
+
+
+var week1 = "<p>Hello, Nelisa. Statistics for Week1: </p> <p> Most Popular Product: {{mostPopularProduct}} </p> <p> least Popular Product: {{leastPopularProduct}} </p>"
+;
+             fs.writeFile('../handlebars/week1.html',week1);
+var template1 = Handlebars.compile(week1);
+
+var data = { "name": "Alan", "hometown": "Somewhere, TX",
+             "kids": [{"name": "Jimmy", "age": "12"}, {"name": "Sally", "age": "4"}]};
+var result = template1(data);
+    </script>
+  </body>
 </html>

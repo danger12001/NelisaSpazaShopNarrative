@@ -127,6 +127,6 @@ exports.weeklySales = function(folderName) {
 // console.log(weeklySales2);
   var weeklySales = {"week1":weeklySales1, "week2":weeklySales2, "week3":weeklySales3, "week4":weeklySales4  };
   // weeklySales.join(",").split("");
-  console.log(weeklySales2);
+  // console.log(weeklySales2);
   return weeklySales;
 };

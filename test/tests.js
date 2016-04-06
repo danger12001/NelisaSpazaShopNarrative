@@ -81,36 +81,36 @@ describe("weeklySales",function(){
 describe("mostPopularProduct",function(){
   it("should return the most popular product of each week",function(){
     var result = mostPopularProduct.mostPopularProduct();
-    assert.equal(result,"week 1: Coke 500ml - 54\nweek 2: Coke 500ml - 98\nweek 3: Milk 1l - 30\nweek 4: Gold Dish Vegetable Curry Can - 63");
+    assert.deepEqual(result,{"week1":"Coke 500ml","week2":"Coke 500ml","week3":"Milk 1l","week4":"Gold Dish Vegetable Curry Can"});
   });
 });
 describe("leastPopularProduct",function(){
   it("should return the least popular product of each week",function(){
     var result = leastPopularProduct.leastPopularProduct();
-    assert.equal(result,"week 1: Shampoo 1 litre - 3\nweek 2: Heart Chocolates - 0\nweek 3: Shampoo 1 litre - 4\nweek 4: Top Class Soy Mince - 0");
+    assert.deepEqual(result,{"week1":"Shampoo 1 litre","week2":"Heart Chocolates","week3":"Shampoo 1 litre","week4":"Top Class Soy Mince"});
   });
 });
 describe("mostPopularCategory",function(){
   it("should return the most popular category of each week",function(){
     var result = mostPopularCategory.mostPopularCategory();
-    assert.deepEqual(result,"week 1: Sweets\nweek 2: Sweets\nweek 3: Dairy\nweek 4: Canned_Goods");
+    assert.deepEqual(result,{"week1":"Sweets","week2":"Sweets","week3":"Dairy","week4":"Canned_Goods"});
   });
 });
 describe("leastPopularCategory",function(){
   it("should return the least popular category of each week",function(){
     var result = leastPopularCategory.leastPopularCategory();
-    assert.deepEqual(result,"week 1: Hygiene\nweek 2: Canned_Goods\nweek 3: Hygiene\nweek 4: Meat");
+    assert.deepEqual(result,{"week1":"Hygiene","week2":"Canned_Goods","week3":"Hygiene","week4":"Meat"});
   });
 });
 describe("mostProfitableProduct",function(){
   it("should return the most profitable product of each week",function(){
     var result = mostProfitableProduct.mostProfitableProduct();
-    assert.equal(result,"week 1: Imasi\nweek 2: Imasi\nweek 3: Imasi\nweek 4: Imasi");
+    assert.deepEqual(result,{"week1":"Imasi","week2":"Imasi","week3":"Imasi","week4":"Imasi"});
   });
 });
 describe("leastProfitableProduct",function(){
   it("should return the least profitable product of each week",function(){
     var result = leastProfitableProduct.leastProfitableProduct();
-    assert.equal(result,"week 1: Mixed Sweets 5s\nweek 2: Mixed Sweets 5s\nweek 3: Mixed Sweets 5s\nweek 4: Mixed Sweets 5s");
+    assert.deepEqual(result,{"week1":"Mixed Sweets 5s","week2":"Mixed Sweets 5s","week3":"Mixed Sweets 5s","week4":"Mixed Sweets 5s"});
   });
 });

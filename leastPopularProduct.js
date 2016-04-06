@@ -22,6 +22,7 @@ var lppw4 = weeklySales4.sort(function(a, b){
 });
 var leastPopularProduct4 = lppw4[0];
 
-var leastPopularProduct = "week 1: " + leastPopularProduct1.stockItem + " - " + leastPopularProduct1.sold + "\n" +  "week 2: " + leastPopularProduct2.stockItem2 + " - " + leastPopularProduct2.sold + "\n" +  "week 3: " + leastPopularProduct3.stockItem + " - " + leastPopularProduct3.sold + "\n" + "week 4: " + leastPopularProduct4.stockItem + " - " + leastPopularProduct4.sold;
+var leastPopularProduct = {"week1":leastPopularProduct1.stockItem,"week2":leastPopularProduct2.stockItem2,"week3":leastPopularProduct3.stockItem,"week4":leastPopularProduct4.stockItem};
 return leastPopularProduct;
+
 };

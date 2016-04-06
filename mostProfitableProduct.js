@@ -113,6 +113,7 @@ var mpp4 = w4.sort(function(a, b) {
 });
 
 var MostProfitableProduct4 = mpp4[0];
-var mostProfitableProduct = "week 1: " + MostProfitableProduct1.item + "\n" +"week 2: " + MostProfitableProduct2.item + "\n" +"week 3: " + MostProfitableProduct3.item + "\n" +"week 4: " + MostProfitableProduct4.item;
+var mostProfitableProduct = {"week1":MostProfitableProduct1.item,"week2":MostProfitableProduct2.item,"week3":MostProfitableProduct3.item,"week4":MostProfitableProduct4.item};
 return mostProfitableProduct;
+
 };

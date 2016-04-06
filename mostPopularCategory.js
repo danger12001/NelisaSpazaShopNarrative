@@ -93,6 +93,7 @@ var mpc4 = oc4.sort(function(a, b) {
 });
 // console.log(mpc4[0]);
 var MostPopularCategory4 = mpc4[0];
-var mostPopularCategory = "week 1: " + MostPopularCategory1.category + "\n" +"week 2: " + MostPopularCategory2.category+ "\n" +"week 3: " + MostPopularCategory3.category+ "\n" +"week 4: " + MostPopularCategory4.category;
+var mostPopularCategory = {"week1":MostPopularCategory1.category,"week2":MostPopularCategory2.category,"week3":MostPopularCategory3.category,"week4":MostPopularCategory4.category};
 return mostPopularCategory;
+
 };
