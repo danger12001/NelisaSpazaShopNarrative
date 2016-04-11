@@ -8,7 +8,7 @@ exports.mostPopularCategory = function() {
   var weeklySales3 = weeklySale.week3;
   var weeklySales4 = weeklySale.week4;
 
-  var category = fs.readFileSync('CSV/catagories.csv', "utf8");
+  var category = fs.readFileSync('../CSV/catagories.csv', "utf8");
   category = category.replace("Product,Category\n", "");
   var interimArray = category.split('\n').join(".").split(',').join('.').split(".");
   var categories = [];

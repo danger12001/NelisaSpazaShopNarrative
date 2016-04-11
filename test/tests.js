@@ -115,6 +115,7 @@ describe("leastProfitableProduct",function(){
     assert.deepEqual(result,{"week1":"Mixed Sweets 5s","week2":"Mixed Sweets 5s","week3":"Mixed Sweets 5s","week4":"Mixed Sweets 5s"});
   });
 });
+
 describe("Purchases",function(){
   it("should return a map of all purchases for each week",function(){
     var result = purchases.Purchases();

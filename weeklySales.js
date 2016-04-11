@@ -1,9 +1,9 @@
 exports.weeklySales = function(folderName) {
   var fs = require('fs'); //file system
-  var inputSales1 = fs.readFileSync('CSV/week1.csv', "utf8");
-  var inputSales2 = fs.readFileSync('CSV/week2.csv', "utf8");
-  var inputSales3 = fs.readFileSync('CSV/week3.csv', "utf8");
-  var inputSales4 = fs.readFileSync('CSV/week4.csv', "utf8"); //gets the first weeks contents
+  var inputSales1 = fs.readFileSync('../CSV/week1.csv', "utf8");
+  var inputSales2 = fs.readFileSync('../CSV/week2.csv', "utf8");
+  var inputSales3 = fs.readFileSync('../CSV/week3.csv', "utf8");
+  var inputSales4 = fs.readFileSync('../CSV/week4.csv', "utf8"); //gets the first weeks contents
   inputSales1 = inputSales1.replace("Day,Date,stock item,No sold,Sales Price\n", "");
   inputSales2 = inputSales2.replace("Day,Date,stock item,No sold,Sales Price\n", "");
   inputSales3 = inputSales3.replace("Day,Date,stock item,No sold,Sales Price\n", "");

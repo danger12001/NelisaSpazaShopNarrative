@@ -6,24 +6,30 @@
 
   </head>
   <body>
-    <script>
+
+{{{body}}}
+<script>
+var handlebars = require('handlebars');
+var mostPopularProduct = require('mostPopularProduct');
+var leastPopularProduct = require('leastPopularProduct');
+var mostPopularCategory = require('mostPopularCategory');
+var leastPopularCategory = require('leastPopularCategory');
+var mostProfitableProduct = require('mostProfitableProduct');
+var leastProfitableProduct = require('leastPrfitableProduct');
 var fs = require('fs');
-var mostPopularProduct = require("mostPopularProduct");
-var leastPopularProduct = require("leastPopularProduct");
-var mostPopularCategory = require("mostPopularCategory");
-var leastPopularCategory = require("leastPopularCategory");
-var mostProfitableProduct = require("mostProfitableProduct");
-var leastProfitableProduct = require("leastProfitableProduct");
 
+var source = fs.readFileSync('display.hbs', "utf8");
 
-var week1 = "<p>Hello, Nelisa. Statistics for Week1: </p> <p> Most Popular Product: {{mostPopularProduct}} </p> <p> least Popular Product: {{leastPopularProduct}} </p>"
-;
-             fs.writeFile('../handlebars/week1.html',week1);
-var template1 = Handlebars.compile(week1);
+var template = handlebars.compile(source);
 
-var data = { "name": "Alan", "hometown": "Somewhere, TX",
-             "kids": [{"name": "Jimmy", "age": "12"}, {"name": "Sally", "age": "4"}]};
-var result = template1(data);
-    </script>
+var data = { Week: week.match(/\d+/), pop:[mostPopularProduct.mostPopularProduct,leastPopularProduct,mostPopularCategory,leastPopularCategory],
+            profit: [mostProfitableProduct, leastProfitableProduct ]};
+
+var result = template(data);
+
+fs.writeFileSync( week + '_display.html', result);
+
+</script>
+<script src="node_modules/handlebars/dist/handlebars.js"></script>
   </body>
 </html>
