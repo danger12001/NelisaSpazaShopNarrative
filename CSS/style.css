@@ -1,0 +1,24 @@
+h1 {
+  font-size: 50px;
+}
+p{
+  font-size: 20px;
+  
+}
+#linkInfo {
+  color: black;
+  font-size: 20px;
+  margin-right: 20px;
+  /*border: 1px solid black;*/
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+}
+#links {
+  color: black;
+  font-size: 25px;
+  /*border: 1px solid black;*/
+  padding: 20px;
+  display: inline;
+  /*margin-left: 50px;*/
+}
