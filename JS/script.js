@@ -1,6 +1,6 @@
 var fs = require("fs");
 // var Handlebars = require('handlebars');
-var handlebars = require('handlebars');
+var handlebars = require('../node_modules/handlebars/dist/handlebars');
 var mostPopularProduct = require('../mostPopularProduct');
 var leastPopularProduct = require('../leastPopularProduct');
 var mostPopularCategory = require('../mostPopularCategory');
