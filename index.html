@@ -3,33 +3,14 @@
   <head>
     <title> Home </title>
     <link href="CSS/style.css" type="text/css" rel="stylesheet">
-
   </head>
   <body>
-
-{{{body}}}
-<script>
-var handlebars = require('handlebars');
-var mostPopularProduct = require('mostPopularProduct');
-var leastPopularProduct = require('leastPopularProduct');
-var mostPopularCategory = require('mostPopularCategory');
-var leastPopularCategory = require('leastPopularCategory');
-var mostProfitableProduct = require('mostProfitableProduct');
-var leastProfitableProduct = require('leastPrfitableProduct');
-var fs = require('fs');
-
-var source = fs.readFileSync('display.hbs', "utf8");
-
-var template = handlebars.compile(source);
-
-var data = { Week: week.match(/\d+/), pop:[mostPopularProduct.mostPopularProduct,leastPopularProduct,mostPopularCategory,leastPopularCategory],
-            profit: [mostProfitableProduct, leastProfitableProduct ]};
-
-var result = template(data);
-
-fs.writeFileSync( week + '_display.html', result);
-
-</script>
-<script src="node_modules/handlebars/dist/handlebars.js"></script>
+<ul>
+<p> You can find your statistics for each week here: </p>
+<a href="handlebars/week1.html"><li>Week 1</li></a>
+<a href="handlebars/week2.html"><li>Week 2</li></a>
+<a href="handlebars/week3.html"><li>Week 3</li></a>
+<a href="handlebars/week4.html"><li>Week 4</li></a>
+</ul>
   </body>
 </html>
