@@ -1,19 +1,18 @@
 var express = require('express');
+var handlebars = require('express-handlebars');
 var app = express();
-var fs = require('fs');
+app.use(express.static("public"));
 
-var index = String(fs.readFileSync("../index.html"));
-var week1 = String(fs.readFileSync("../Views/week1.html"));
+app.engine('handlebars', handlebars({defaultLayout : 'main'}));
+app.set('view engine', 'handlebars');
 
 
 // create a route
 app.get('/', function (req, res) {
-  app.use(express.static('public'));
-  app.use(express.static('files'));
- res.send(index);
+ res.render("index");
 });
-app.get('/Views/week1.html', function(req, res) {
-  res.send(week1);
+app.get('/week1', function (req, res) {
+ res.render("week1");
 });
 //start the server
 var server = app.listen(3000, function () {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Week 4 Statistics </title>
+    <title> Week 2 Statistics </title>
     <link href="../CSS/bootstrap.css" type="text/css" rel="stylesheet">
     <link href=../CSS/foundation.css type = "text/css" rel="stylesheet">
     <!-- <link href="CSS/style.css" type="text/css" rel="stylesheet"> -->
@@ -37,17 +37,17 @@
 
     <div class="navbar-header"> </div>
 
-  <h1 class="heading"> WEEK 4:</h1>
+  <h1 class="heading"> WEEK 2:</h1>
   <ul id="statistics">
-    <li class="col-md-8">Most Popular Product :</li><li class="col-md-4"> Gold Dish Vegetable Curry Can</li>
-    <li class="col-md-8">Most Popular Category:</li> <li class="col-md-4">Canned_Goods</li>
-    <li class="col-md-8">Most Profitable Product: </li><li class="col-md-4">Imasi</li>
+    <li class="col-md-8">Most Popular Product :</li><li class="col-md-4"> {{mostPopularProduct}}</li>
+    <li class="col-md-8">Most Popular Category:</li> <li class="col-md-4">{{mostPopularCategory}}</li>
+    <li class="col-md-8">Most Profitable Product: </li><li class="col-md-4">{{mostProfitableProduct}}</li>
+    <li class="col-md-8">Most Profitable Category:</li><li class="col-md-4"> {{mostProfitableCategory}}</li>
 
-    <li class="col-md-8">Least Popular Product:</li><li class="col-md-4"> Top Class Soy Mince</li>
-    <li class="col-md-8">Least Popular Category:</li><li class="col-md-4"> Meat</li>
-    <li class="col-md-8">Least Profitable Product:</li><li class="col-md-4"> Mixed Sweets 5s</li>
+    <li class="col-md-8">Least Popular Product:</li><li class="col-md-4"> {{leastPopularProduct}}</li>
+    <li class="col-md-8">Least Popular Category:</li><li class="col-md-4"> {{leastPopularCategory}}</li>
 
-      <li class="heading"> Sales: </li> <li> <li id="sales">Apples - loose: 56</li> <li id="sales">Bananas - loose: 35</li> <li id="sales">Bread: 35</li> <li id="sales">Chakalaka Can: 21</li> <li id="sales">Coke 500ml: 21</li> <li id="sales">Cream Soda 500ml: 0</li> <li id="sales">Fanta 500ml: 7</li> <li id="sales">Gold Dish Vegetable Curry Can: 7</li> <li id="sales">Gold Dish Vegetable Curry Can: 63</li> <li id="sales">Imasi: 42</li> <li id="sales">Iwisa Pap 5kg: 21</li> <li id="sales">Milk 1l: 56</li> <li id="sales">Mixed Sweets 5s: 21</li> <li id="sales">Shampoo 1 litre: 0</li> <li id="sales">Soap Bar: 7</li> <li id="sales">Top Class Soy Mince: 0</li> <li id="sales">Top Class Soy Mince: 63</li> </li>
+      <li class="heading"> Sales: </li> <li> {{#each weeklySales}}<li id="sales">{{stockItem2}}: {{sold}}</li> {{/each}}</li>
   </ul><a id="HomeLink" class="btn btn-primary" href=../index.html> Home </a>
 
 

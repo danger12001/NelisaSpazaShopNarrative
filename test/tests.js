@@ -1,12 +1,12 @@
 var assert = require('assert');
-var weeklySales = require('../weeklySales');
-var mostPopularProduct = require('../mostPopularProduct');
-var leastPopularProduct = require('../leastPopularProduct');
-var mostPopularCategory = require('../mostPopularCategory');
-var leastPopularCategory = require('../leastPopularCategory');
-var mostProfitableProduct = require('../mostProfitableProduct');
-var mostProfitableCategory = require('../mostProfitableCategory');
-var purchases = require("../Purchases");
+var weeklySales = require('../routes/weeklySales');
+var mostPopularProduct = require('../routes/mostPopularProduct');
+var leastPopularProduct = require('../routes/leastPopularProduct');
+var mostPopularCategory = require('../routes/mostPopularCategory');
+var leastPopularCategory = require('../routes/leastPopularCategory');
+var mostProfitableProduct = require('../routes/mostProfitableProduct');
+var mostProfitableCategory = require('../routes/mostProfitableCategory');
+var purchases = require("../routes/Purchases");
 
 describe("weeklySales",function(){
   it("should return a map of the sales for the month",function(){
