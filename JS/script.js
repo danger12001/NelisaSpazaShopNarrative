@@ -7,6 +7,7 @@ var mostPopularCategory = require('../mostPopularCategory');
 var leastPopularCategory = require('../leastPopularCategory');
 var mostProfitableProduct = require('../mostProfitableProduct');
 var leastProfitableProduct = require('../leastProfitableProduct');
+var weeklySales = require('../weeklySales');
 
 var week1 = String(fs.readFileSync("../handlebars/week1.hdb"));
 var week2 = String(fs.readFileSync("../handlebars/week2.hdb"));
@@ -16,7 +17,7 @@ var week4 = String(fs.readFileSync("../handlebars/week4.hdb"));
 
 var source1  = week1;
 var template1 = handlebars.compile(source1);
-var context1 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week1, leastPopularProduct: leastPopularProduct.leastPopularProduct().week1, mostPopularCategory: mostPopularCategory.mostPopularCategory().week1,leastPopularCategory: leastPopularCategory.leastPopularCategory().week1,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week1, leastProfitableProduct: leastProfitableProduct.leastProfitableProduct().week1 };
+var context1 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week1, leastPopularProduct: leastPopularProduct.leastPopularProduct().week1, mostPopularCategory: mostPopularCategory.mostPopularCategory().week1,leastPopularCategory: leastPopularCategory.leastPopularCategory().week1,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week1, leastProfitableProduct: leastProfitableProduct.leastProfitableProduct().week1, weeklySales: weeklySales.weeklySales().week1 };
 var html1    = template1(context1);
 
 var source2  = week2;

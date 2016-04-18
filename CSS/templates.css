@@ -6,7 +6,7 @@
   margin-left: 10px;
 }
 ul {
-  border: 2px solid black;
+  border: 1px solid black;
   background-color: lightgrey;
   list-style: none;
   padding-left: 0px;
@@ -28,13 +28,45 @@ color: blue;
 }
 .col-md-8 {
   border: 1px solid black;
-    background-color: lightgrey;
+    background-color: lightblue;
+    font-size: 25px;
 }
 .col-md-4 {
   border: 1px solid black;
-    background-color: lightgrey;
+    background-color: lightblue;
+    font-size: 25px;
 }
 /*.expanded dropdown button {
   height: 10px;
   width:100%;
 }*/
+.navbar-default {
+  background-color: black;
+}
+.navbar-header {
+  color: blue;
+}
+#heading {
+  background-color: lightgrey;
+  border: 1px solid black;
+  margin-bottom: 0px;
+
+}
+.nav li{
+  border: 1px solid black;
+  height: 2%;
+  width: 120px;
+  background-color: black;
+}
+#Login {
+margin-right: 5px;
+}
+.nav {
+  background-color: black;
+}
+body {
+  background-color: lightgray;
+}
+#statistics {
+  margin-left: 0px;
+}
