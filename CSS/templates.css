@@ -70,3 +70,8 @@ body {
 #statistics {
   margin-left: 0px;
 }
+#sales {
+  border: 1px solid black;
+  font-size: 25px;
+  background-color: lightblue;
+}

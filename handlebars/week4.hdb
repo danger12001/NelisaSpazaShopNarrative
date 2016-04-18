@@ -46,6 +46,8 @@
     <li class="col-md-8">Least Popular Product:</li><li class="col-md-4"> {{leastPopularProduct}}</li>
     <li class="col-md-8">Least Popular Category:</li><li class="col-md-4"> {{leastPopularCategory}}</li>
     <li class="col-md-8">Least Profitable Product:</li><li class="col-md-4"> {{leastProfitableProduct}}</li>
+
+      <li class="heading"> Sales: </li> <li> {{#each weeklySales}}<li id="sales">{{stockItem}}: {{sold}}</li> {{/each}}</li>
   </ul><a id="HomeLink" class="btn btn-primary" href=../index.html> Home </a>
 
 
