@@ -5,7 +5,7 @@ var leastPopularProduct = require('../leastPopularProduct');
 var mostPopularCategory = require('../mostPopularCategory');
 var leastPopularCategory = require('../leastPopularCategory');
 var mostProfitableProduct = require('../mostProfitableProduct');
-var leastProfitableProduct = require('../leastProfitableProduct');
+var mostProfitableCategory = require('../mostProfitableCategory');
 var purchases = require("../Purchases");
 
 describe("weeklySales",function(){
@@ -109,10 +109,10 @@ describe("mostProfitableProduct",function(){
     assert.deepEqual(result,{"week1":"Imasi","week2":"Imasi","week3":"Imasi","week4":"Imasi"});
   });
 });
-describe("leastProfitableProduct",function(){
-  it("should return the least profitable product of each week",function(){
-    var result = leastProfitableProduct.leastProfitableProduct();
-    assert.deepEqual(result,{"week1":"Mixed Sweets 5s","week2":"Mixed Sweets 5s","week3":"Mixed Sweets 5s","week4":"Mixed Sweets 5s"});
+describe("mostProfitableCategory",function(){
+  it("should return the most profitable category of each week",function(){
+    var result = mostProfitableCategory.mostProfitableCategory();
+    assert.deepEqual(result,{"week1":"Dairy","week2":"Dairy","week3":"Dairy","week4":"Dairy"});
   });
 });
 

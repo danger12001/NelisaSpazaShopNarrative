@@ -1,11 +1,20 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
+
+var index = String(fs.readFileSync("../index.html"));
+var week1 = String(fs.readFileSync("../Views/week1.html"));
+
 
 // create a route
 app.get('/', function (req, res) {
- res.send('Hello World!');
+  app.use(express.static('public'));
+  app.use(express.static('files'));
+ res.send(index);
 });
-
+app.get('/Views/week1.html', function(req, res) {
+  res.send(week1);
+});
 //start the server
 var server = app.listen(3000, function () {
 
