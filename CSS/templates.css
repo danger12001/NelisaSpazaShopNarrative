@@ -1,0 +1,40 @@
+
+.heading{
+  font-size: 50px;
+  text-decoration: underline;
+  font-style: bold;
+  margin-left: 10px;
+}
+ul {
+  border: 2px solid black;
+  background-color: lightgrey;
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  /*border: 1px solid black;*/
+  font-size: 30px;
+}
+a {
+font-size: 25px;
+color: blue;
+}
+.btn {
+  /*padding-top: 5px;*/
+  /*background-color:black;*/
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+.col-md-8 {
+  border: 1px solid black;
+    background-color: lightgrey;
+}
+.col-md-4 {
+  border: 1px solid black;
+    background-color: lightgrey;
+}
+/*.expanded dropdown button {
+  height: 10px;
+  width:100%;
+}*/
