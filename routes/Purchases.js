@@ -1,4 +1,4 @@
-var weeklySales = require("./weeklySales");
+var weeklySales = require("../routes/weeklySales");
 var fs = require("fs");
 exports.Purchases = function() {
   var weeklySale = weeklySales.weeklySales();

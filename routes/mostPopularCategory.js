@@ -1,5 +1,5 @@
 
-var weeklySales = require("./weeklySales");
+var weeklySales = require("../routes/weeklySales");
 var fs = require("fs");
 exports.mostPopularCategory = function() {
   var weeklySale = weeklySales.weeklySales();

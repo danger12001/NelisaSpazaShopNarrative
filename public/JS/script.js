@@ -1,13 +1,13 @@
 var fs = require("fs");
 // var Handlebars = require('handlebars');
 var handlebars = require('../node_modules/handlebars/dist/handlebars');
-var mostPopularProduct = require('../mostPopularProduct');
-var leastPopularProduct = require('../leastPopularProduct');
-var mostPopularCategory = require('../mostPopularCategory');
-var leastPopularCategory = require('../leastPopularCategory');
-var mostProfitableProduct = require('../mostProfitableProduct');
-var mostProfitableCategory = require('../mostProfitableCategory');
-var weeklySales = require('../weeklySales');
+var mostPopularProduct = require('../routes/mostPopularProduct');
+var leastPopularProduct = require('../routes/leastPopularProduct');
+var mostPopularCategory = require('../routes/mostPopularCategory');
+var leastPopularCategory = require('../routes/leastPopularCategory');
+var mostProfitableProduct = require('../routes/mostProfitableProduct');
+var mostProfitableCategory = require('../routes/mostProfitableCategory');
+var weeklySales = require('../routes/weeklySales');
 
 var week1 = String(fs.readFileSync("../handlebars/week1.hdb"));
 var week2 = String(fs.readFileSync("../handlebars/week2.hdb"));
