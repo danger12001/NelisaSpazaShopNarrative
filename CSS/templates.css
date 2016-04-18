@@ -75,3 +75,7 @@ body {
   font-size: 25px;
   background-color: lightblue;
 }
+#HomeLink {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
