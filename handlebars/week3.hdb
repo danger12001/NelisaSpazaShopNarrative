@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Week 3 </title>
+<link href="../CSS/templates.css" type="text/css" rel="stylesheet">
+<link href="../CSS/bootstrap.css" type="text/css" rel="stylesheet">
+<link href=../CSS/foundation.css type = "text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar-header"> </div>
+<h1 class="heading"> WEEK 3:</h1>
+<ul>
+  <li class="col-md-8">Most Popular Product :</li><li class="col-md-4"> {{mostPopularProduct}}</li>
+  <li class="col-md-8">Most Popular Category:</li> <li class="col-md-4">{{mostPopularCategory}}</li>
+  <li class="col-md-8">Most Profitable Product: </li><li class="col-md-4">{{mostProfitableProduct}}</li>
+
+  <li class="col-md-8">Least Popular Product:</li><li class="col-md-4"> {{leastPopularProduct}}</li>
+  <li class="col-md-8">Least Popular Category:</li><li class="col-md-4"> {{leastPopularCategory}}</li>
+  <li class="col-md-8">Least Profitable Product:</li><li class="col-md-4"> {{leastProfitableProduct}}</li>
+</ul><a id="HomeLink" class="btn btn-primary" href=../index.html> Home </a>
+</body>
+</html>

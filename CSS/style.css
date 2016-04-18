@@ -3,22 +3,38 @@ h1 {
 }
 p{
   font-size: 20px;
-  
+
 }
 #linkInfo {
   color: black;
   font-size: 20px;
   margin-right: 20px;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
+  background-color: lightblue;
   padding: 20px;
   display: inline-block;
   width: 100%;
 }
-#links {
-  color: black;
-  font-size: 25px;
-  /*border: 1px solid black;*/
-  padding: 20px;
-  display: inline;
-  /*margin-left: 50px;*/
+#linkInfo ol {
+  list-style-type: none;
+  /*margin-left: 0px;*/
+  padding: 0px;
+  /*border: 1px dashed black;*/
+}
+
+.test {
+  width: 92em;
+  height: 50px;
+}
+.navbar-default {
+  background-color: black;
+}
+.navbar-header {
+  color: blue;
+}
+#heading {
+  background-color: lightgrey;
+  border: 1px solid black;
+  margin-bottom: 0px;
+
 }
