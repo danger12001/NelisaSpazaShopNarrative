@@ -1,4 +1,4 @@
-var weeklySales = require('../routes/weeklySales');
+var weeklySales = require('./weeklySales');
 exports.leastPopularProduct = function(){
   var weeklySale = weeklySales.weeklySales();
   var weeklySales1 = weeklySale.week1;

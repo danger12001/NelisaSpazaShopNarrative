@@ -1,7 +1,6 @@
 var fs = require("fs");
-// var Handlebars = require('handlebars');
-var handlebars = require('../node_modules/handlebars/dist/handlebars');
-var mostPopularProduct = require('../routes/mostPopularProduct');
+var handlebars = require('handlebars');
+var mostPopularProduct = require('/routes/mostPopularProduct');
 var leastPopularProduct = require('../routes/leastPopularProduct');
 var mostPopularCategory = require('../routes/mostPopularCategory');
 var leastPopularCategory = require('../routes/leastPopularCategory');
@@ -9,10 +8,10 @@ var mostProfitableProduct = require('../routes/mostProfitableProduct');
 var mostProfitableCategory = require('../routes/mostProfitableCategory');
 var weeklySales = require('../routes/weeklySales');
 
-var week1 = String(fs.readFileSync("../handlebars/week1.hdb"));
-var week2 = String(fs.readFileSync("../handlebars/week2.hdb"));
-var week3 = String(fs.readFileSync("../handlebars/week3.hdb"));
-var week4 = String(fs.readFileSync("../handlebars/week4.hdb"));
+var week1 = String(fs.readFileSync("../views/week1.handlebars"));
+var week2 = String(fs.readFileSync("../views/week2.handlebars"));
+var week3 = String(fs.readFileSync("../views/week3.handlebars"));
+var week4 = String(fs.readFileSync("../views/week4.handlebars"));
 
 var Sales = weeklySales.weeklySales();
 var week1Sales = Sales.week1;
@@ -42,7 +41,7 @@ var context4 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week
 var html4    = template4(context4);
 
 
-fs.writeFileSync('../Views/week1.html', html1);
-fs.writeFileSync('../Views/week2.html', html2);
-fs.writeFileSync('../Views/week3.html', html3);
-fs.writeFileSync('../Views/week4.html', html4);
+fs.writeFileSync('../views/week1.handlebars', html1);
+fs.writeFileSync('../views/week2.handlebars', html2);
+fs.writeFileSync('../views/week3.handlebars', html3);
+fs.writeFileSync('../views/week4.handlebars', html4);

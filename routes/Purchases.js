@@ -1,4 +1,4 @@
-var weeklySales = require("../routes/weeklySales");
+var weeklySales = require("./weeklySales");
 var fs = require("fs");
 exports.Purchases = function() {
   var weeklySale = weeklySales.weeklySales();
@@ -7,7 +7,7 @@ exports.Purchases = function() {
   var weeklySales3 = weeklySale.week3;
   var weeklySales4 = weeklySale.week4;
 
-  var purchase = fs.readFileSync('CSV/purchases.csv', "utf8");
+  var purchase = fs.readFileSync('./CSV/purchases.csv', "utf8");
   purchase = purchase.replace("Shop;Date;Item;Quantity;Cost;Total Cost\n", "");
   var interimArray = purchase.split('\n').join(".").split(';').join('.').split(".");
 
