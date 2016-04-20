@@ -1,6 +1,9 @@
 var express = require('express');
 var handlebars = require('express-handlebars');
 var app = express();
+var mysql = require('mysql'),
+    myConnection = require('express-myconnection'),
+    bodyParser = require('body-parser');
 
 var mostPopularProduct = require('./routes/mostPopularProduct');
 var leastPopularProduct = require('./routes/leastPopularProduct');
@@ -12,8 +15,21 @@ var weeklySales = require('./routes/weeklySales');
 
 app.use(express.static("public"));
 
+var dbOptions = {
+      host: 'localhost',
+      user: 'root',
+      password: '5550121a',
+      port: 3000,
+      database: 'Nelisa'
+    };
+
+
+app.use(myConnection(mysql, dbOptions, 'single'));
+
 app.engine('handlebars', handlebars({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
+
+
 var Sales = weeklySales.weeklySales();
 var week1Sales = Sales.week1;
 var week2Sales = Sales.week2;
