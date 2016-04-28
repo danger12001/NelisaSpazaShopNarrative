@@ -12,6 +12,7 @@ var leastPopularCategory = require('./routes/leastPopularCategory');
 var mostProfitableProduct = require('./routes/mostProfitableProduct');
 var mostProfitableCategory = require('./routes/mostProfitableCategory');
 var weeklySales = require('./routes/weeklySales');
+var purchases = require('./routes/Purchases');
 
 app.use(express.static("public"));
 
@@ -20,7 +21,7 @@ var dbOptions = {
       user: 'root',
       password: '5550121a',
       port: 3000,
-      database: 'Nelisa'
+      // database: 'Nelisa'
     };
 
 
@@ -29,6 +30,11 @@ app.use(myConnection(mysql, dbOptions, 'single'));
 app.engine('handlebars', handlebars({defaultLayout : 'main'}));
 app.set('view engine', 'handlebars');
 
+var Purchases = purchases.Purchases();
+var week1Pur = Purchases.week1;
+var week2Pur = Purchases.week2;
+var week3Pur = Purchases.week3;
+var week4Pur = Purchases.week4;
 
 var Sales = weeklySales.weeklySales();
 var week1Sales = Sales.week1;
@@ -36,10 +42,10 @@ var week2Sales = Sales.week2;
 var week3Sales = Sales.week3;
 var week4Sales = Sales.week4;
 
-var week1 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week1, leastPopularProduct: leastPopularProduct.leastPopularProduct().week1, mostPopularCategory: mostPopularCategory.mostPopularCategory().week1,leastPopularCategory: leastPopularCategory.leastPopularCategory().week1,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week1, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week1, weeklySales: week1Sales };
-var week2 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week2, leastPopularProduct: leastPopularProduct.leastPopularProduct().week2, mostPopularCategory: mostPopularCategory.mostPopularCategory().week2,leastPopularCategory: leastPopularCategory.leastPopularCategory().week2,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week2, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week2, weeklySales: week2Sales };
-var week3 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week3, leastPopularProduct: leastPopularProduct.leastPopularProduct().week3, mostPopularCategory: mostPopularCategory.mostPopularCategory().week3,leastPopularCategory: leastPopularCategory.leastPopularCategory().week3,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week3, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week3, weeklySales: week3Sales };
-var week4 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week4, leastPopularProduct: leastPopularProduct.leastPopularProduct().week4, mostPopularCategory: mostPopularCategory.mostPopularCategory().week4,leastPopularCategory: leastPopularCategory.leastPopularCategory().week4,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week4, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week1, weeklySales: week4Sales };
+var week1 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week1, leastPopularProduct: leastPopularProduct.leastPopularProduct().week1, mostPopularCategory: mostPopularCategory.mostPopularCategory().week1,leastPopularCategory: leastPopularCategory.leastPopularCategory().week1,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week1, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week1, weeklySales: week1Sales, purchases: week1Pur };
+var week2 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week2, leastPopularProduct: leastPopularProduct.leastPopularProduct().week2, mostPopularCategory: mostPopularCategory.mostPopularCategory().week2,leastPopularCategory: leastPopularCategory.leastPopularCategory().week2,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week2, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week2, weeklySales: week2Sales, purchases: week2Pur };
+var week3 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week3, leastPopularProduct: leastPopularProduct.leastPopularProduct().week3, mostPopularCategory: mostPopularCategory.mostPopularCategory().week3,leastPopularCategory: leastPopularCategory.leastPopularCategory().week3,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week3, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week3, weeklySales: week3Sales, purchases: week3Pur };
+var week4 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week4, leastPopularProduct: leastPopularProduct.leastPopularProduct().week4, mostPopularCategory: mostPopularCategory.mostPopularCategory().week4,leastPopularCategory: leastPopularCategory.leastPopularCategory().week4,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week4, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week1, weeklySales: week4Sales, purchases: week4Pur };
 
 // create a route
 app.get('/', function (req, res) {

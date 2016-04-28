@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Week 4 Statistics </title>
+    <title> Week 1 Statistics </title>
     <link href="../CSS/bootstrap.css" type="text/css" rel="stylesheet">
     <link href=../CSS/foundation.css type = "text/css" rel="stylesheet">
     <!-- <link href="CSS/style.css" type="text/css" rel="stylesheet"> -->
@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Nelisa's Spaza Shop</a>
+          <a class="navbar-brand" href="/">Nelisa's Spaza Shop</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,8 +28,6 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li id="Login"><a href="#">Log In</a></li>
-              <li><a href="#">LINK</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -37,7 +35,7 @@
 
     <div class="navbar-header"> </div>
 
-  <h1 class="heading"> WEEK 4:</h1>
+  <h1 id="heading"> WEEK 4:</h1>
   <ul id="statistics">
     <li class="col-md-8">Most Popular Product :</li><li class="col-md-4"> {{mostPopularProduct}}</li>
     <li class="col-md-8">Most Popular Category:</li> <li class="col-md-4">{{mostPopularCategory}}</li>
@@ -47,8 +45,10 @@
     <li class="col-md-8">Least Popular Product:</li><li class="col-md-4"> {{leastPopularProduct}}</li>
     <li class="col-md-8">Least Popular Category:</li><li class="col-md-4"> {{leastPopularCategory}}</li>
 
-      <li class="heading"> Sales: </li> <li> {{#each weeklySales}}<li id="sales">{{stockItem}}: {{sold}}</li> {{/each}}</li>
-  </ul><a id="HomeLink" class="btn btn-primary" href="/"> Home </a>
+    <li class="heading"> Sales: </li> <li> {{#each weeklySales}}<li id="sales" class="col-md-6">{{stockItem}}: {{sold}}</li> {{/each}}</li>
+  <hr>
+    <li class="heading"> Purchases: </li> <li> {{#each purchases}}<li id="sales" class="col-md-6">{{item}}: {{quantity}}</li> {{/each}}</li>
+    </ul><a id="linkgrid" href="/"> Home </a>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
