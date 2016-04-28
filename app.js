@@ -25,6 +25,7 @@ var dbOptions = {
     };
 
 
+
 app.use(myConnection(mysql, dbOptions, 'single'));
 
 app.engine('handlebars', handlebars({defaultLayout : 'main'}));
@@ -47,6 +48,20 @@ var week2 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week2, 
 var week3 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week3, leastPopularProduct: leastPopularProduct.leastPopularProduct().week3, mostPopularCategory: mostPopularCategory.mostPopularCategory().week3,leastPopularCategory: leastPopularCategory.leastPopularCategory().week3,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week3, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week3, weeklySales: week3Sales, purchases: week3Pur };
 var week4 = {mostPopularProduct: mostPopularProduct.mostPopularProduct().week4, leastPopularProduct: leastPopularProduct.leastPopularProduct().week4, mostPopularCategory: mostPopularCategory.mostPopularCategory().week4,leastPopularCategory: leastPopularCategory.leastPopularCategory().week4,mostProfitableProduct: mostProfitableProduct.mostProfitableProduct().week4, mostProfitableCategory: mostProfitableCategory.mostProfitableCategory().week1, weeklySales: week4Sales, purchases: week4Pur };
 
+// connection.query('CREATE TABLE people(id int primary key, name varchar(255), age int, address text)', function(err, result) {
+//     if (err) throw err;
+//     connection.query('INSERT INTO people (name, age, address) VALUES (?, ?, ?)', ['Larry', '41', 'California, USA'], function(err, result) {
+//       if (err) throw err;
+//       connection.query('SELECT * FROM people', function(err, results) {
+//         if (err) throw err;
+//         console.log(results[0].id);
+//         console.log(results[0].name);
+//         console.log(results[0].age);
+//         console.log(results[0].address);
+//             }
+//           );
+//         });
+      // });
 // create a route
 app.get('/', function (req, res) {
  res.render("index");
