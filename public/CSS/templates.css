@@ -95,3 +95,6 @@ body {
   color: white;
   margin-top: 10px;
 }
+.navbar-brand {
+  font-size: 30px;
+}

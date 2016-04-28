@@ -18,10 +18,9 @@ app.use(express.static("public"));
 
 var dbOptions = {
       host: 'localhost',
-      user: 'root',
-      password: '5550121a',
+      user: 'me',
+      password: 'secret',
       port: 3000,
-      // database: 'Nelisa'
     };
 
 
